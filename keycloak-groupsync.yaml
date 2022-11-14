@@ -6,6 +6,9 @@ spec:
   providers:
   - name: keycloak
     keycloak:
+      ca:
+        name: keycloak-ca
+      loginRealm: openshift-IdP
       realm: openshift-IdP
       credentialsSecret:
         name: keycloak-group-sync
