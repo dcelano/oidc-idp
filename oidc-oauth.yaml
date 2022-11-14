@@ -22,4 +22,4 @@ spec:
         - email
         groups: 
         - groups
-      issuer: https://keycloak-server-oidc-provider.apps.sno-cluster.okd-sno.dedalus.red.com/auth/realms/openshift-IdP
+      issuer: https://keycloak-server-oidc-provider.apps.sno-cluster.okd-sno.dedalus.red.com/realms/openshift-IdP
