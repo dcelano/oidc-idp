@@ -1,0 +1,25 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+  - name: OIDC-IdP
+    mappingMethod: claim
+    type: OpenID
+    openID:
+      clientID: idp2openshift
+      clientSecret:
+        name: keycloak-client-secret
+      ca: 
+        name: keycloak-ca
+      claims:
+        preferredUsername: 
+        - preferred_username
+        name: 
+        - name
+        email: 
+        - email
+        groups: 
+        - groups
+      issuer: https://keycloak-server-oidc-provider.apps.sno-cluster.okd-sno.dedalus.red.com/auth/realms/openshift-IdP
