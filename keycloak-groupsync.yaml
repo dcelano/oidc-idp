@@ -9,7 +9,7 @@ spec:
       ca:
         kind: ConfigMap
         name: keycloak-ca
-        namespace: openshift-config
+        namespace: oidc-provider
       loginRealm: openshift-IdP
       realm: openshift-IdP
       credentialsSecret:
