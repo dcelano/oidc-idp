@@ -1,0 +1,13 @@
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: GroupSync
+metadata:
+  name: keycloak-groupsync
+spec:
+  providers:
+  - name: keycloak
+    keycloak:
+      realm: openshift-IdP
+      credentialsSecret:
+        name: keycloak-group-sync
+        namespace: oidc-provider
+      url: https://keycloak-server-oidc-provider.apps.sno-cluster.okd-sno.dedalus.red.com
